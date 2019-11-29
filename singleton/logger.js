@@ -14,4 +14,20 @@ class Logger {
   }
 }
 
-module.exports = Logger;
+// First pass solution
+// class SingleTon {
+//   constructor() {
+//     if (!SingleTon.instance) {
+//       SingleTon.instance = new Logger();
+//     }
+//   }
+
+//   getInstance() {
+//     return SingleTon.instance;
+//   }
+// }
+
+// Second pass solution
+// Note Node.js will automatically cache the Logger instance
+// meaning only once instance will be created at run time
+module.exports = new Logger();

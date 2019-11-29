@@ -1,8 +1,6 @@
-const Logger = require("./logger");
+const logger = require("./logger");
 const Shopper = require("./shopper");
 const Store = require("./store");
-
-const logger = new Logger();
 
 logger.log("Starting app");
 
@@ -24,4 +22,7 @@ logger.log("finished config...");
 
 console.log(`${logger.count} logs total`);
 
+// Note it only logs message in this current file
+// meaning we have multiple instance of Logger being created
+// Solution: is to make a singleton pattern one instance only
 logger.logs.map(log => console.log(`   ${log.message}`));
