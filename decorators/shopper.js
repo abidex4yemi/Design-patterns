@@ -20,6 +20,7 @@ class Shopper {
     this.items.forEach(item => {
       console.log(`    * ${item.name} - $${item.price}`);
     });
+    console.log(`${this.name} has $${this.account.toFixed(2)} remaining.`);
   }
 }
 
