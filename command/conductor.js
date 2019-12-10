@@ -17,18 +17,18 @@ class Conductor {
 
   undo() {
     if (!this.history.length) {
-      console.log("No command existing command to undo");
+      console.log("No existing command to undo");
       return;
     }
     const command = this.history.pop();
     command.undo();
-    this.undo.push(command);
+    this.undone.push(command);
     console.log(`Undo ${command.name}`);
   }
 
   redo() {
     if (!this.undone.length) {
-      console.log("No command existing command to redo");
+      console.log("No existing command to redo");
       return;
     }
     const command = this.undone.pop();
