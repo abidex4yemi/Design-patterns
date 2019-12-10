@@ -4,7 +4,7 @@ class InventoryItem {
     this.price = price;
   }
 
-  writeLn() {
+  writeLine() {
     process.stdout.write(`${this.name}: $${this.price}`);
   }
 }
