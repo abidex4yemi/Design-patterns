@@ -1,5 +1,11 @@
 const logger = require("./Logger");
 
-logger.logs("Hello world");
-logger.logs("Hi world");
-logger.logs("Yo world");
+logger.log("Hello world");
+logger.log("Hi world");
+logger.log("Yo world");
+
+logger.changeStrategy("none");
+
+logger.log("Hello world");
+logger.log("Hi world");
+logger.log("Yo world");
