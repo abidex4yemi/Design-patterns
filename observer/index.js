@@ -27,3 +27,4 @@ catsAndThings.sale(20);
 insAndOuts.sale(50);
 
 console.log(valleyMall.sales);
+console.log(alex.sales);
